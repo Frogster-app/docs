@@ -129,7 +129,7 @@ Nothing to see here. The contents of this branch are essentially a cache that's 
 
 You can view the actual documentation as it's intended to be viewed at [https://guide.frogster.app/](https://guide.frogster.app/)
 
-If you're looking to update our documentation, check the relevant development branch's ['docs' dir](https://guide.frogster.app/tree/dev/docs).
+If you're looking to update our documentation, check the relevant development branch's ['docs' dir](https://github.com/Frogster-app/guide/tree/dev/docs).
 EOF
 
 # copy the resulting html pages built from sphinx above to our new git repo
