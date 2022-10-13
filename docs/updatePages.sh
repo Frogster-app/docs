@@ -132,7 +132,7 @@ You can view the actual documentation as it's intended to be viewed at [https://
 If you're looking to update our documentation, check the relevant development branch's ['docs' dir](https://github.com/Frogster-app/guide/tree/dev/docs).
 EOF
 
-# copy the resulting html pages built from sphinx above to our new git repo
+# copy the resulting html pages built from sphinx above to our new git repo 
 git add .
 
 # commit all the new files
