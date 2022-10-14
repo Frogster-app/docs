@@ -69,12 +69,12 @@ for current_version in ${versions}; do
 #             number of pages
 #		sphinx-build -b rinoh docs/ docs/_build/rinoh -D language="${current_language}"
 #		mkdir -p "${docroot}/${current_language}/${current_version}"
-#		cp "docs/_build/rinoh/target.pdf" "${docroot}/${current_language}/${current_version}/frogster-guide_${current_language}_${current_version}.pdf"
+#		cp "docs/_build/rinoh/target.pdf" "${docroot}/${current_language}/${current_version}/frogster-docs_${current_language}_${current_version}.pdf"
 
 		# EPUB #
 		sphinx-build -b epub docs/ docs/_build/epub -D language="${current_language}"
 		mkdir -p "${docroot}/${current_language}/${current_version}"
-		cp "docs/_build/epub/target.epub" "${docroot}/${current_language}/${current_version}/frogster-guide_${current_language}_${current_version}.epub"
+		cp "docs/_build/epub/target.epub" "${docroot}/${current_language}/${current_version}/frogster-docs_${current_language}_${current_version}.epub"
 
 		# copy the static assets produced by the above build into our docroot
 		rsync -av "docs/_build/html/" "${docroot}/"
@@ -101,7 +101,7 @@ git remote add deploy "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSIT
 git checkout -b gh-pages
 
 # Add CNAME - this is required for GitHub to know what our custom domain is
-echo "guide.frogster.app" > CNAME
+echo "docs.frogster.app" > CNAME
 
 # add .nojekyll to the root so that github won't 404 on content added to dirs
 # that start with an underscore (_), such as our "_content" dir..
@@ -127,9 +127,9 @@ cat >> README.md <<EOF
 
 Nothing to see here. The contents of this branch are essentially a cache that's not intended to be viewed on github.com.
 
-You can view the actual documentation as it's intended to be viewed at [https://guide.frogster.app/](https://guide.frogster.app/)
+You can view the actual documentation as it's intended to be viewed at [https://docs.frogster.app/](https://docs.frogster.app/)
 
-If you're looking to update our documentation, check the relevant development branch's ['docs' dir](https://github.com/Frogster-app/guide/tree/dev/docs).
+If you're looking to update our documentation, check the relevant development branch's ['docs' dir](https://github.com/Frogster-app/docs/tree/dev/docs).
 EOF
 
 # copy the resulting html pages built from sphinx above to our new git repo 
