@@ -113,7 +113,7 @@ cat >> index.html <<EOF
 <html>
    <head>
       <title>Frogster Docs</title>
-      <meta http-equiv = "refresh" content="0; url='/en/dev/'" />
+      <meta http-equiv = "refresh" content="0; url='/en/latest/'" />
    </head>
    <body>
       <p>Please wait while you're redirected to our <a href="/">Frogster documentation page</a>.</p>
