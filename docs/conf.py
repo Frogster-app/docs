@@ -43,18 +43,12 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
-    "multiproject",
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.intersphinx",
     "sphinxcontrib.httpdomain",
     "sphinx_tabs.tabs",
     "sphinx-prompt",
-    "notfound.extension",
-    "hoverxref.extension",
-    "sphinx_search.extension",
-    "sphinxemoji.sphinxemoji",
-    "sphinx_design",
-    "myst_parser",
+    "sphinx_search.extension"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
