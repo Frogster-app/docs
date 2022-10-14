@@ -19,9 +19,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'helloWorld'
-copyright = '2020, Michael Altfield'
-author = 'Michael Altfield'
+project = 'Frogster'
+copyright = '2022, Frogster'
+author = 'Reece Harris'
 
 # The short X.Y version
 version = ''
@@ -265,7 +265,7 @@ html_context['downloads'].append( ('epub', '/' +REPO_NAME+ '/' +current_language
 ##########################
  
 html_context['display_github'] = True
-html_context['github_user'] = 'maltfield'
-html_context['github_repo'] = 'rtd-github-pages'
+html_context['github_user'] = 'Frogster-app'
+html_context['github_repo'] = 'docs'
 html_context['github_version'] = 'master/docs/'
  
