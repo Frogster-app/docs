@@ -74,11 +74,9 @@ Registration
 
        .. FIXME: we can't use :query string: here because it doesn't render properly
 
-      :Request JSON Object:
-
-         * **username** (*string*) [*required*] -- Must be utf-8 encoded, 4-16 characters long, and must not contain any spaces or special characters.
-         * **email** (*string*) [*required*] -- A valid email address.
-         * **password** (*string*) [*required*] -- Must be utf-8 encoded, 12-64 characters long.
+       * **username** (*string*) [*required*] -- Must be utf-8 encoded, 4-16 characters long, and must not contain any spaces or special characters.
+       * **email** (*string*) [*required*] -- A valid email address.
+       * **password** (*string*) [*required*] -- Must be utf-8 encoded, 12-64 characters long.
 
 
 Login
@@ -280,10 +278,8 @@ Add 2FA
 
        .. FIXME: we can't use :query string: here because it doesn't render properly
 
-      :Request JSON Object:
-
-         * **username** (*string*) [*required*] -- Must be utf-8 encoded, 4-16 characters long, and must not contain any spaces or special characters.
-         * **password** (*string*) [*required*] -- Must be utf-8 encoded, 12-64 characters long.
+        * **username** (*string*) [*required*] -- Must be utf-8 encoded, 4-16 characters long, and must not contain any spaces or special characters.
+        * **password** (*string*) [*required*] -- Must be utf-8 encoded, 12-64 characters long.
 
 Activate 2FA
 ~~~~~~~~~~~~
