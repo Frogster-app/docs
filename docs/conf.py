@@ -267,5 +267,5 @@ html_context['downloads'].append( ('epub', '/' +REPO_NAME+ '/' +current_language
 html_context['display_github'] = True
 html_context['github_user'] = 'Frogster-app'
 html_context['github_repo'] = 'docs'
-html_context['github_version'] = 'master/docs/'
+html_context['github_version'] = 'dev/docs/'
  
