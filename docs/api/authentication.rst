@@ -153,12 +153,10 @@ Login
 
        .. FIXME: we can't use :query string: here because it doesn't render properly
 
-      :Request JSON Object:
-
-         * **username** (*string*) [*required*] -- Must be utf-8 encoded, 4-16 characters long, and must not contain any spaces or special characters.
-         * **password** (*string*) [*required*] -- Must be utf-8 encoded, 12-64 characters long.
-         * **client** (*string*) [*required*] -- The client type, either ``webapp`` or ``mobile``.
-         * **code** (*string*) [*optional*] -- The 6-digit found from your authentication app.
+       * **username** (*string*) [*required*] -- Must be utf-8 encoded, 4-16 characters long, and must not contain any spaces or special characters.
+       * **password** (*string*) [*required*] -- Must be utf-8 encoded, 12-64 characters long.
+       * **client** (*string*) [*required*] -- The client type, either ``webapp`` or ``mobile``.
+       * **code** (*string*) [*optional*] -- The 6-digit found from your authentication app.
 
 Verify email
 ------------
@@ -278,8 +276,8 @@ Add 2FA
 
        .. FIXME: we can't use :query string: here because it doesn't render properly
 
-        * **username** (*string*) [*required*] -- Must be utf-8 encoded, 4-16 characters long, and must not contain any spaces or special characters.
-        * **password** (*string*) [*required*] -- Must be utf-8 encoded, 12-64 characters long.
+       * **username** (*string*) [*required*] -- Must be utf-8 encoded, 4-16 characters long, and must not contain any spaces or special characters.
+       * **password** (*string*) [*required*] -- Must be utf-8 encoded, 12-64 characters long.
 
 Activate 2FA
 ~~~~~~~~~~~~
@@ -347,11 +345,10 @@ Activate 2FA
 
        .. FIXME: we can't use :query string: here because it doesn't render properly
 
-      :Request JSON Object:
 
-         * **username** (*string*) [*required*] -- Must be utf-8 encoded, 4-16 characters long, and must not contain any spaces or special characters.
-         * **password** (*string*) [*required*] -- Must be utf-8 encoded, 12-64 characters long.
-         * **code** (*string*) [*optional*] -- The 6-digit found from your authentication app.
+       * **username** (*string*) [*required*] -- Must be utf-8 encoded, 4-16 characters long, and must not contain any spaces or special characters.
+       * **password** (*string*) [*required*] -- Must be utf-8 encoded, 12-64 characters long.
+       * **code** (*string*) [*optional*] -- The 6-digit found from your authentication app.
 
 
 Remove 2FA
@@ -420,8 +417,6 @@ Remove 2FA
 
        .. FIXME: we can't use :query string: here because it doesn't render properly
 
-      :Request JSON Object:
-
-         * **username** (*string*) [*required*] -- Must be utf-8 encoded, 4-16 characters long, and must not contain any spaces or special characters.
-         * **password** (*string*) [*required*] -- Must be utf-8 encoded, 12-64 characters long.
-         * **code** (*string*) [*optional*] -- The 6-digit found from your authentication app.
+       * **username** (*string*) [*required*] -- Must be utf-8 encoded, 4-16 characters long, and must not contain any spaces or special characters.
+       * **password** (*string*) [*required*] -- Must be utf-8 encoded, 12-64 characters long.
+       * **code** (*string*) [*optional*] -- The 6-digit found from your authentication app.
