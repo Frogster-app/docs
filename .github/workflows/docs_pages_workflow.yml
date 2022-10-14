@@ -26,6 +26,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        python3 -m pip install sphinxcontrib.httpdomain
+        apt-get install python3-sphinxcontrib-httpdomain
         docs/updatePages.sh
       shell: bash
