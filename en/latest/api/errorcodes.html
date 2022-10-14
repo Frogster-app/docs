@@ -1,0 +1,484 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Error codes &mdash; Frogster 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/rtd_sphinx_search.min.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/js/rtd_sphinx_search.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Authentication" href="authentication.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Frogster
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                latest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">API documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authentication.html">Authentication</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Error codes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#errors">409 Errors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">409001004</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">409001005</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">422 Errors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4"><code class="docutils literal notranslate"><span class="pre">422001000</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5"><code class="docutils literal notranslate"><span class="pre">422001001</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6"><code class="docutils literal notranslate"><span class="pre">422001002</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7"><code class="docutils literal notranslate"><span class="pre">422001003</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">500 Errors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9"><code class="docutils literal notranslate"><span class="pre">500001006</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10"><code class="docutils literal notranslate"><span class="pre">500001007</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11"><code class="docutils literal notranslate"><span class="pre">500001008</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12"><code class="docutils literal notranslate"><span class="pre">500001009</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Frogster</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Error codes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/Frogster-app/docs/blob/dev/docs/api/errorcodes.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="error-codes">
+<h1>Error codes<a class="headerlink" href="#error-codes" title="Permalink to this heading">¶</a></h1>
+<section id="errors">
+<h2>409 Errors<a class="headerlink" href="#errors" title="Permalink to this heading">¶</a></h2>
+<section id="id1">
+<h3><code class="docutils literal notranslate"><span class="pre">409001004</span></code><a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Message</p></td>
+<td><p>Reason</p></td>
+</tr>
+<tr class="row-even"><td><p>Email is already in use</p></td>
+<td><p>Email is already in use by another account</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id2">
+<h3><code class="docutils literal notranslate"><span class="pre">409001005</span></code><a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Message</p></td>
+<td><p>Reason</p></td>
+</tr>
+<tr class="row-even"><td><p>Username is already in use</p></td>
+<td><p>Username is already in use by another account</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id3">
+<h2>422 Errors<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<section id="id4">
+<h3><code class="docutils literal notranslate"><span class="pre">422001000</span></code><a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Message</p></td>
+<td><p>Reason</p></td>
+</tr>
+<tr class="row-even"><td><p>Registration is disabled</p></td>
+<td><p>Registration has been disabled server wide.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id5">
+<h3><code class="docutils literal notranslate"><span class="pre">422001001</span></code><a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Message</p></td>
+<td><p>Reason</p></td>
+<td><p>Additional info</p></td>
+</tr>
+<tr class="row-even"><td><p>Invalid email</p></td>
+<td><p>Email inputted didnt pass regex</p></td>
+<td><p>regex: /^[<a href="#id13"><span class="problematic" id="id14">a-zA-Z0-9_</span></a>.+-]+&#64;[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id6">
+<h3><code class="docutils literal notranslate"><span class="pre">422001002</span></code><a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Message</p></td>
+<td><p>Reason</p></td>
+<td><p>Additional info</p></td>
+</tr>
+<tr class="row-even"><td><p>Invalid username</p></td>
+<td><p>Username inputted didnt pass regex</p></td>
+<td><p>regex: /^[<a href="#id15"><span class="problematic" id="id16">a-zA-Z0-9_</span></a>]{4,16}$/</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id7">
+<h3><code class="docutils literal notranslate"><span class="pre">422001003</span></code><a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Message</p></td>
+<td><p>Reason</p></td>
+<td><p>Additional info</p></td>
+</tr>
+<tr class="row-even"><td><p>Invalid password</p></td>
+<td><p>Password inputted didnt pass regex</p></td>
+<td><p>regex: /^[x00-x7F]{12,64}$/</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id8">
+<h2>500 Errors<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h2>
+<section id="id9">
+<h3><code class="docutils literal notranslate"><span class="pre">500001006</span></code><a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Message</p></td>
+<td><p>Reason</p></td>
+</tr>
+<tr class="row-even"><td><p>Database error</p></td>
+<td><p>There was an error inserting user into the database</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id10">
+<h3><code class="docutils literal notranslate"><span class="pre">500001007</span></code><a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Message</p></td>
+<td><p>Reason</p></td>
+</tr>
+<tr class="row-even"><td><p>Database error</p></td>
+<td><p>There was an error inserting user into the database for verifying emails</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id11">
+<h3><code class="docutils literal notranslate"><span class="pre">500001008</span></code><a class="headerlink" href="#id11" title="Permalink to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Message</p></td>
+<td><p>Reason</p></td>
+</tr>
+<tr class="row-even"><td><p>Error sending verification email</p></td>
+<td><p>There was an error sending email verification email</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id12">
+<h3><code class="docutils literal notranslate"><span class="pre">500001009</span></code><a class="headerlink" href="#id12" title="Permalink to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Message</p></td>
+<td><p>Reason</p></td>
+</tr>
+<tr class="row-even"><td><p>Database error</p></td>
+<td><p>Error selecting user from database</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="authentication.html" class="btn btn-neutral float-left" title="Authentication" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Frogster.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Languages</dt>
+        
+           <strong> 
+          <dd><a href="https://docs.frogster.app/en/latest/">en</a></dd>
+           </strong> 
+        
+          
+          <dd><a href="https://docs.frogster.app/es/latest/">es</a></dd>
+          
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+          
+          <dd><a href="https://docs.frogster.app/en/dev/">dev</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="https://docs.frogster.app/en/latest/">latest</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+          <dd><a href="//en/latest/Frogster-docs_en_latest.pdf">pdf</a></dd>
+        
+          <dd><a href="//en/latest/Frogster-docs_en_latest.epub">epub</a></dd>
+        
+      </dl>
+      
+      
+      <hr/>
+      <a href="https://tech.michaelaltfield.net/2020/07/18/sphinx-rtd-github-pages-1/">Continuous Documentation</a> hosting provided by <a href="https://pages.github.com/">GitHub Pages</a>.
+ 
+    </div>
+  </div>
+
+ 
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
