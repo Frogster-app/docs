@@ -19,6 +19,7 @@ jobs:
         set -x
         apt-get update
         apt-get install -y git
+        apt-get install -y python3 python3-sphinxcontrib-httpdomain
         git clone "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" .
       shell: bash
 
@@ -26,6 +27,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        apt-get install python3-sphinxcontrib-httpdomain
         docs/updatePages.sh
       shell: bash
