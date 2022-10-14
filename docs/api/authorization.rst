@@ -22,6 +22,18 @@ Registration
               -H https://api.frogster.app/auth/registration/ \
               -H "Content-Type: application/json" \
               -d @body.json
+            
+        .. code-tab:: javascript
+
+            fetch('https://api.frogster.app/auth/registration/',{
+                method:'POST',
+                headers:{
+                    'content-type': 'application/json'
+                },
+                body:JSON.stringify(body.json)
+            })
+            .then(res=> res.json())
+            .then(data => console.log(data))
 
         .. code-tab:: python
 
@@ -35,7 +47,7 @@ Registration
             )
             print(response.json())
 
-    The content of ``body.json`` is like,
+    The content of ``body.json``,
 
     .. sourcecode:: json
 
@@ -84,6 +96,18 @@ Login
               -H "Content-Type: application/json" \
               -d @body.json
 
+        .. code-tab:: javascript
+
+            fetch('https://api.frogster.app/auth/login/',{
+                method:'POST',
+                headers:{
+                    'content-type': 'application/json'
+                },
+                body:JSON.stringify(body.json)
+            })
+            .then(res=> res.json())
+            .then(data => console.log(data))
+
         .. code-tab:: python
 
             import requests
@@ -96,7 +120,7 @@ Login
             )
             print(response.json())
 
-    The content of ``body.json`` is like,
+    The content of ``body.json``,
 
     .. sourcecode:: json
 
@@ -132,7 +156,7 @@ Login
          * **username** (*string*) [*required*] -- Must be utf-8 encoded, 4-16 characters long, and must not contain any spaces or special characters.
          * **password** (*string*) [*required*] -- Must be utf-8 encoded, 12-64 characters long.
          * **client** (*string*) [*required*] -- The client type, either ``webapp`` or ``mobile``.
-         * **code** (*string*) [*required*] -- The 6-digit found from your authentication app.
+         * **code** (*string*) [*optional*] -- The 6-digit found from your authentication app.
 
 Verify email
 ------------
@@ -151,6 +175,14 @@ Verify email
               -X POST \
               -H https://api.frogster.app/auth/verify/XXXXXXXXXX.../ \
               -H "Content-Type: application/json"
+            
+        .. code-tab:: node
+
+            fetch('https://api.frogster.app/auth/verify/XXXXXXXXXX.../',{
+                method:'GET',
+            })
+            .then(res=> res.json())
+            .then(data => console.log(data))
 
         .. code-tab:: python
 
@@ -170,3 +202,226 @@ Verify email
             "status": "ok",
             "message": "Account verified"
         }
+
+2FA
+---
+
+Add 2FA
+~~~~~~~
+
+.. http:post:: /auth/2fa/add/
+
+    Add 2FA to a frogster account.
+
+    **Example request**:
+
+    .. tabs::
+
+        .. code-tab:: bash
+
+            $ curl \
+              -X POST \
+              -H https://api.frogster.app/auth/2fa/add/ \
+              -H "Content-Type: application/json" \
+              -d @body.json
+
+        .. code-tab:: javascript
+
+            fetch('https://api.frogster.app/auth/2fa/add/',{
+                method:'POST',
+                headers:{
+                    'content-type': 'application/json'
+                },
+                body:JSON.stringify(body.json)
+            })
+            .then(res=> res.json())
+            .then(data => console.log(data))
+
+        .. code-tab:: python
+
+            import requests
+            import json
+            URL = 'https://api.frogster.app/auth/2fa/add/'
+            data = json.load(open('body.json', 'rb'))
+            response = requests.post(
+                URL,
+                json=data,
+            )
+            print(response.json())
+
+    The content of ``body.json``,
+
+    .. sourcecode:: json
+
+        {
+            "username": "frogster",
+            "password": "Pr7!U4fS2PNn"
+        }
+
+    **Example response**:
+
+    .. sourcecode:: json
+
+        {
+            "status": "ok",
+            "message": "2FA secret generated",
+            "data": {
+                "secret": "WAZZUXKDCG7NHJCMCNTZADFY6ZHOWPMZ",
+                "uri": "otpauth://totp/Frogster%3Aplays%40frogster.app?secret=WAZZUXKDCG7NHJCMCNTZADFY6ZHOWPMZ&issuer=Frogster",
+                "qr": "https://chart.googleapis.com/chart?chs=166x166&chld=L|0&cht=qr&chl=otpauth://totp/Frogster%3Aplay%40frogster.app%3Fsecret=WAZZUXKDCG7NHJCMCNTZADFY6ZHOWPMZ%26issuer=Frogster"
+            }
+        }
+
+    .. note::
+
+       .. FIXME: we can't use :query string: here because it doesn't render properly
+
+      :Request JSON Object:
+
+         * **username** (*string*) [*required*] -- Must be utf-8 encoded, 4-16 characters long, and must not contain any spaces or special characters.
+         * **password** (*string*) [*required*] -- Must be utf-8 encoded, 12-64 characters long.
+
+Activate 2FA
+~~~~~~~~~~~~
+
+.. http:post:: /auth/2fa/activate/
+
+    Activate 2FA to a frogster account.
+
+    **Example request**:
+
+    .. tabs::
+
+        .. code-tab:: bash
+
+            $ curl \
+              -X POST \
+              -H https://api.frogster.app/auth/2fa/activate/ \
+              -H "Content-Type: application/json" \
+              -d @body.json
+
+        .. code-tab:: javascript
+
+            fetch('https://api.frogster.app/auth/2fa/activate/',{
+                method:'POST',
+                headers:{
+                    'content-type': 'application/json'
+                },
+                body:JSON.stringify(body.json)
+            })
+            .then(res=> res.json())
+            .then(data => console.log(data))
+
+        .. code-tab:: python
+
+            import requests
+            import json
+            URL = 'https://api.frogster.app/auth/2fa/activate/'
+            data = json.load(open('body.json', 'rb'))
+            response = requests.post(
+                URL,
+                json=data,
+            )
+            print(response.json())
+
+    The content of ``body.json``,
+
+    .. sourcecode:: json
+
+        {
+            "username": "frogster",
+            "password": "Pr7!U4fS2PNn",
+            "code": "123456"
+        }
+
+    **Example response**:
+
+    .. sourcecode:: json
+
+        {
+            "status": "ok",
+            "message": "2FA active"
+        }
+
+    .. note::
+
+       .. FIXME: we can't use :query string: here because it doesn't render properly
+
+      :Request JSON Object:
+
+         * **username** (*string*) [*required*] -- Must be utf-8 encoded, 4-16 characters long, and must not contain any spaces or special characters.
+         * **password** (*string*) [*required*] -- Must be utf-8 encoded, 12-64 characters long.
+         * **code** (*string*) [*optional*] -- The 6-digit found from your authentication app.
+
+
+Remove 2FA
+~~~~~~~~~~
+
+.. http:post:: /auth/2fa/remove/
+
+    Remove 2FA to a frogster account.
+
+    **Example request**:
+
+    .. tabs::
+
+        .. code-tab:: bash
+
+            $ curl \
+              -X POST \
+              -H https://api.frogster.app/auth/2fa/remove/ \
+              -H "Content-Type: application/json" \
+              -d @body.json
+
+        .. code-tab:: javascript
+
+            fetch('https://api.frogster.app/auth/2fa/remove/',{
+                method:'POST',
+                headers:{
+                    'content-type': 'application/json'
+                },
+                body:JSON.stringify(body.json)
+            })
+            .then(res=> res.json())
+            .then(data => console.log(data))
+
+        .. code-tab:: python
+
+            import requests
+            import json
+            URL = 'https://api.frogster.app/auth/2fa/remove/'
+            data = json.load(open('body.json', 'rb'))
+            response = requests.post(
+                URL,
+                json=data,
+            )
+            print(response.json())
+
+    The content of ``body.json``,
+
+    .. sourcecode:: json
+
+        {
+            "username": "frogster",
+            "password": "Pr7!U4fS2PNn",
+            "code": "123456"
+        }
+
+    **Example response**:
+
+    .. sourcecode:: json
+
+        {
+            "status": "ok",
+            "message": "2FA removed"
+        }
+
+    .. note::
+
+       .. FIXME: we can't use :query string: here because it doesn't render properly
+
+      :Request JSON Object:
+
+         * **username** (*string*) [*required*] -- Must be utf-8 encoded, 4-16 characters long, and must not contain any spaces or special characters.
+         * **password** (*string*) [*required*] -- Must be utf-8 encoded, 12-64 characters long.
+         * **code** (*string*) [*optional*] -- The 6-digit found from your authentication app.
