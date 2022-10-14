@@ -39,10 +39,16 @@ release = '1.0.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx_rtd_theme',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.githubpages',
+   'sphinx_rtd_theme',
+   'sphinx.ext.autodoc',
+   'sphinx.ext.viewcode',
+   'sphinx.ext.githubpages',
+   "sphinx.ext.autosectionlabel",
+   "sphinx.ext.intersphinx",
+   "sphinxcontrib.httpdomain",
+   "sphinx_tabs.tabs",
+   "sphinx-prompt",
+   "sphinx_search.extension"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -228,18 +234,18 @@ html_context['current_version'] = current_version
 html_context['version'] = current_version
  
 # POPULATE LINKS TO OTHER LANGUAGES
-html_context['languages'] = [ ('en', '/' +REPO_NAME+ '/en/' +current_version+ '/') ]
+html_context['languages'] = [ ('en', 'https://docs.frogster.app' +REPO_NAME+ '/en/' +current_version+ '/') ]
  
 languages = [lang.name for lang in os.scandir('locales') if lang.is_dir()]
 for lang in languages:
-   html_context['languages'].append( (lang, '/' +REPO_NAME+ '/' +lang+ '/' +current_version+ '/') )
+   html_context['languages'].append( (lang, 'https://docs.frogster.app' +REPO_NAME+ '/' +lang+ '/' +current_version+ '/') )
  
 # POPULATE LINKS TO OTHER VERSIONS
 html_context['versions'] = list()
  
 versions = [branch.name for branch in repo.branches]
 for version in versions:
-   html_context['versions'].append( (version, '/' +REPO_NAME+ '/'  +current_language+ '/' +version+ '/') )
+   html_context['versions'].append( (version, 'https://docs.frogster.app' +REPO_NAME+ '/'  +current_language+ '/' +version+ '/') )
  
 # POPULATE LINKS TO OTHER FORMATS/DOWNLOADS
  
@@ -267,5 +273,5 @@ html_context['downloads'].append( ('epub', '/' +REPO_NAME+ '/' +current_language
 html_context['display_github'] = True
 html_context['github_user'] = 'Frogster-app'
 html_context['github_repo'] = 'docs'
-html_context['github_version'] = 'master/docs/'
+html_context['github_version'] = 'dev/docs/'
  
