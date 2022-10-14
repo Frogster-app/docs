@@ -45,7 +45,7 @@ extensions = [
    'sphinx.ext.githubpages',
    "sphinx.ext.autosectionlabel",
    "sphinx.ext.intersphinx",
-   "sphinx.sphinxcontrib.httpdomain",
+   "sphinxcontrib.httpdomain",
    "sphinx_tabs.tabs",
    "sphinx-prompt",
    "sphinx_search.extension"
