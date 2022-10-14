@@ -14,7 +14,7 @@ python3-git
 python3-pip 
 python3-virtualenv 
 python3-setuptools
-sphinxcontrib-packages
+sphinxcontrib-httpdomain
 
 alabaster==0.7.12
     # via sphinx
