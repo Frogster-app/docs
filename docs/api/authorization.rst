@@ -176,7 +176,7 @@ Verify email
               -H https://api.frogster.app/auth/verify/XXXXXXXXXX.../ \
               -H "Content-Type: application/json"
             
-        .. code-tab:: node
+        .. code-tab:: javascript
 
             fetch('https://api.frogster.app/auth/verify/XXXXXXXXXX.../',{
                 method:'GET',
