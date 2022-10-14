@@ -6,7 +6,7 @@ Welcome to Frogster's documentation!
    :caption: API documentation:
 
    /api/index
-   /api/authorization
+   /api/authentication
    /api/errorcodes
 
 

@@ -1,7 +1,11 @@
-Authorization
+Authentication
 =============
 
-`endpoint: https://api.frogster.app/`
+The authentication endpoint routes all sensitive data through secure middleware. This allows us to efficiently perform security updates without affecting the whole network.
+
+.. note::
+    
+        The authentication endpoint is not a public API. It is not intended to be used by third-party applications. It is only used by authorised application.
 
 
 Registration
